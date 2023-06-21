@@ -1,3 +1,5 @@
+import 'package:belajar_flutter/ui/safe_area_tes.dart';
+import 'package:belajar_flutter/ui/sign_up_view.dart';
 import 'package:belajar_flutter/ui/widgets/spacings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -68,24 +70,32 @@ class SplashScreenView extends StatelessWidget {
                   ),
                 ),
                 Spacings.vSpace(74),
-                Container(
-                  width: 300,
-                  height: 51,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(
-                        20,
-                      ),
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SignUpView(),
                     ),
-                    color: Color(0xFF2FB176),
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Get Started',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
+                  child: Container(
+                    width: 300,
+                    height: 51,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(
+                          20,
+                        ),
+                      ),
+                      color: Color(0xFF2FB176),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        'Get Started',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ),
